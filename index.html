@@ -85,14 +85,25 @@ html{
     position: relative;
     margin-top: 80px;
     padding-top: 50%;
-    background: url("./assets/image/slider.png") top center / cover no-repeat;
+    background: url("https://image.playkakaogames.com/gt-web/live/images/pc/bg_intro.jpg") top center / cover no-repeat;
+}
+
+#slider .slider-img::before{
+     position: absolute;
+    bottom: -37%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://image.playkakaogames.com/gt-web/live/images/pc/img_intro.png') center center no-repeat;
+    background-size: 100% ;
+    content: '';
 }
 
 .slider-img .text-content{
     position: absolute;
-    bottom: 0;
+    top: 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 36px;
     text-transform: uppercase;
     margin: 10% 0;
     left: 50%;
@@ -166,7 +177,65 @@ html{
     text-align: center;
 }
 
+/* Content - Coupon */
+#coupon{
+    
+}
+
+#coupon .bg_coupon{
+    position: relative;
+    margin-top: -4px;
+    padding-top: 100%;
+    background: url('./assets/image/bg_coupon.jpg') top center no-repeat;
+    background-size: 100%;
+}
+
+#coupon .bg_coupon::before{
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/image/bg_monitor.png') center center no-repeat;
+    background-size: 100% ;
+    content: '';
+}
+
+.coupon-content .title{
+    position: absolute;
+    top: 11%;
+    width: 100%;
+    height: 3%;
+    background-image: url(	https://image.playkakaogames.com/gt-web/live/images/pc/img_txt.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: ani-bt-text2 2s steps(7) infinite;
+}
+
+.coupon-content{
+    position: absolute;
+    top:0;
+    left: 20%;
+    display: block;
+    width: 30%;
+    height: 100%;
+}
 /* Footer */
+
+@keyframes ani-bt-text2{
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -700px;
+    }
+}
+
+@keyframes ani_twinkle_txt{
+    50%{
+        opacity: 0.5;
+    }
+}
     </style>
 </head>
 <body>
@@ -186,7 +255,7 @@ html{
                     <li><a href="https://discord.com/invite/x96nDgK">Discord</a></li>
                 </ul>
             </li>
-            <li><a href="#">Coupon</a></li>
+            <li><a href="#coupon">Coupon</a></li>
             <li><a href="">Support</a></li>
             <li><img src="" alt=""></li>
         </ul>
@@ -236,7 +305,7 @@ html{
                 <img src="./assets/image/thumb_sohee_on.gif" alt="" class="gif-sohee">
             </div>
         </div>
-        <!--  -->
+        <!-- Explore  -->
         <div class="content-explore">
             <div class="content-adventure">
                 <div class="content-section">
@@ -253,6 +322,21 @@ html{
             </div>
             <div class="explore-img">
                 <img src="./assets/image/kanterbury.png" alt="">
+            </div>
+        </div>
+
+        <!-- Coupon -->
+        <div id="coupon">
+            <div class="bg_coupon">
+                <div class="coupon-content">
+                    <p class="title"></p>
+                    <p class="text">Select your region</p>
+                    <form id="coupon-form" action="" method="post" onsubmit="return false">
+                        <fieldset>
+                            <div class="wrap-region"></div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
 
